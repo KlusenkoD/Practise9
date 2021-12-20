@@ -1,0 +1,127 @@
+.wrapper{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+}
+.imgnname{
+    display: flex;
+    height: 220px;
+    margin: 15px;
+}
+.imgnname div{
+    float: none;
+}
+body *{
+    border-radius: 10px;
+}
+hr{
+	size: 3px;
+	color: #A6473F;
+}
+header{
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    color: #3C5398;
+}
+main{
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+main input{
+    display: none;
+}
+div.card{
+    background-color: #B0E0E6;
+    width: 25vw;
+    height: 350px;
+    margin-top: 3em;
+}
+div.card img{
+    width: 12vw;
+    height: 200px;
+    float: top;
+}
+nav{
+    background-color: #E7E7E7;
+    width: 15vw;
+    justify-content: right;
+}
+
+div.card:hover{
+    background-color: #FFDFC2;
+}
+button:hover{
+    background-color: #B0E0E6;
+}
+.copyright{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+	height: 75px;
+	width: 11vw;
+	color: #A6473F;
+	background-color: #FFD5D1;
+}
+input#keks:checked ~ div.card:not(.keks),
+input#mafin:checked ~ div.card:not(.mafin),
+input#bise:checked ~ div.card:not(.bise),
+input#tort:checked ~ div.card:not(.tort){
+    display: none;
+}
+
+@media (max-width: 1200px){
+    div.card > :not(div.imgnname){
+        display: none;
+    }
+    div.card{
+        height: 250px;
+        margin-bottom: 5rem;
+    }
+    .wrapper{
+        display: block;
+    }
+    nav,
+    main{
+        width: 100%;
+    }
+    nav{
+        background-color: initial;
+    }
+    .imgnname{
+        display: inline-block;
+    }
+    div.card img{
+        width: 20vw;
+    }
+    .contact *{
+        display: block;
+    }
+    .copyright a::before{
+        content: "✉";
+    }
+}
+@media (max-width: 730px){
+    div.card div.imgnname div{
+        display: none;
+    }
+    div.card{
+        height: 300px;
+        width: 95vw;
+        margin-bottom: 10rem;
+    }
+    main{
+        display: inline;
+    }
+    div.card img{
+        width: 90vw;
+        height: 275px;
+    }
+    .copyright{
+        justify-content:start;
+        flex-flow: column wrap;
+    }
+}
